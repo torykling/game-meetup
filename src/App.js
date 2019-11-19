@@ -26,6 +26,13 @@ export default class App extends Component {
       })
       .catch(err => console.log(err));
   }
+  doThisWhileLoading = () => {
+    if (this.state.games !== null && this.state.meetups !== null) {
+      return <MeetupList {...this.state} />;
+    } else {
+      return <h1>Loading...</h1>;
+    }
+  };
 
   render() {
     return (
@@ -36,15 +43,16 @@ export default class App extends Component {
           </Link>
         </nav>
         <div className="content-wrap">
-          <Route
+          {/* <Route
             path="/"
             exact
             render={routerProps => (
               <MeetupList {...routerProps} {...this.state} />
             )}
-          />
+          /> */}
+          <Route path="/" exact render={this.doThisWhileLoading}></Route>
           <Route
-            path="/meetup/:id"
+            path="/meetup/id/:id"
             exact
             render={routerProps => <Meetup {...routerProps} {...this.state} />}
           />

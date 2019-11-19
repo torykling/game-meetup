@@ -7,10 +7,11 @@ export class EditMeetup extends Component {
     this.state = {
       // make sure we can grab this meetupId
       meetupId: this.props.match.params.id,
+      title: null,
       game: null,
       date: null,
       time: null,
-      name: null,
+      creator: null,
       location: null,
       message: null
     };
@@ -19,7 +20,7 @@ export class EditMeetup extends Component {
   }
   handleChange = e => {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value.trim() });
   };
   handleSubmit = e => {
     e.preventDefault();
@@ -30,7 +31,7 @@ export class EditMeetup extends Component {
         game: this.state.game,
         date: this.state.date,
         time: this.state.time,
-        name: this.state.name,
+        creator: this.state.creator,
         location: this.state.location,
         message: this.state.message
       })
@@ -42,6 +43,12 @@ export class EditMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <input
+          type="text"
+          name="title"
+          onChange={this.handleChange}
+          placeholder="Title"
+        />
         <input
           type="text"
           name="game"
@@ -62,7 +69,7 @@ export class EditMeetup extends Component {
         />
         <input
           type="text"
-          name="name"
+          name="creator"
           onChange={this.handleChange}
           placeholder="Creator Name"
         />
@@ -78,6 +85,7 @@ export class EditMeetup extends Component {
           onChange={this.handleChange}
           placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
         />
+        <input type="submit" />
       </form>
     );
   }

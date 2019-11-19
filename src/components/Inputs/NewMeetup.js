@@ -5,10 +5,11 @@ export class NewMeetup extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: null,
       game: null,
       date: null,
       time: null,
-      name: null,
+      creator: null,
       location: null,
       message: null
     };
@@ -17,7 +18,7 @@ export class NewMeetup extends Component {
   }
   handleChange = e => {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value.trim() });
   };
   onSubmit = e => {
     e.preventDefault();
@@ -27,7 +28,7 @@ export class NewMeetup extends Component {
         game: this.state.game,
         date: this.state.date,
         time: this.state.time,
-        name: this.state.name,
+        creator: this.state.creator,
         location: this.state.location,
         message: this.state.message
       })
@@ -39,6 +40,12 @@ export class NewMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
+        <input
+          type="text"
+          name="title"
+          onChange={this.handleChange}
+          placeholder="Title"
+        />
         <input
           type="text"
           name="game"
@@ -59,7 +66,7 @@ export class NewMeetup extends Component {
         />
         <input
           type="text"
-          name="name"
+          name="creator"
           onChange={this.handleChange}
           placeholder="Creator Name"
         />
@@ -75,6 +82,7 @@ export class NewMeetup extends Component {
           onChange={this.handleChange}
           placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
         />
+        <input type="submit" />
       </form>
     );
   }
