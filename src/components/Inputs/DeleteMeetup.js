@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export class DeleteMeetup extends Component {
   constructor(props) {
@@ -11,7 +12,8 @@ export class DeleteMeetup extends Component {
   }
   handleClick = e => {
     e.preventDefault();
-    const url = "urlpath/meetup" + this.state.meetupId;
+    const url =
+      "https://game-meetup-api.herokuapp.com/meetup/id/" + this.state.meetupId;
     axios
       .delete(url)
       .then(res => {

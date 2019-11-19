@@ -23,7 +23,8 @@ export class EditMeetup extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    const url = "url/meetup" + this.state.meetupId;
+    const url =
+      "https://game-meetup-api.herokuapp.com/meetup/id/" + this.state.meetupId;
     axios
       .put(url, {
         game: this.state.game,
@@ -51,7 +52,7 @@ export class EditMeetup extends Component {
           type="text"
           name="date"
           onChange={this.handleChange}
-          placeholder="date (mm/dd/yyyy)"
+          placeholder="date (mm-dd-yyyy)"
         />
         <input
           type="text"

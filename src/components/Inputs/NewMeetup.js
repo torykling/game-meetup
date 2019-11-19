@@ -23,7 +23,7 @@ export class NewMeetup extends Component {
     e.preventDefault();
 
     axios
-      .post("URL", {
+      .post("https://game-meetup-api.herokuapp.com/meetup", {
         game: this.state.game,
         date: this.state.date,
         time: this.state.time,
@@ -49,7 +49,7 @@ export class NewMeetup extends Component {
           type="text"
           name="date"
           onChange={this.handleChange}
-          placeholder="date (mm/dd/yyyy)"
+          placeholder="date (mm-dd-yyyy)"
         />
         <input
           type="text"

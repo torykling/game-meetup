@@ -5,27 +5,24 @@ import Meetup from "./components/Meetup";
 import MeetupList from "./components/MeetupList";
 import axios from "axios";
 
-export class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { games: null, meetups: null };
-    this.getGames = this.getGames.bind(this);
   }
   componentDidMount() {
     axios
-      .get("url/meetups")
+      .get("https://game-meetup-api.herokuapp.com/")
       .then(res => {
         this.setState({ meetups: res.data });
+        // console.log(res.data);
       })
       .catch(err => console.log(err));
-    this.getGames();
-  }
-
-  getGames() {
     axios
-      .get("url/games")
+      .get("https://game-meetup-api.herokuapp.com/games")
       .then(res => {
         this.setState({ games: res.data });
+        // console.log(res.data);
       })
       .catch(err => console.log(err));
   }
