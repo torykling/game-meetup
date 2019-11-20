@@ -11,8 +11,8 @@
 
 /* nav */
 .nav {
-    height: 85px;
-    width: 100ve;
+    height: 100px;
+    width: 100vw;
     background-color: #FCC133;
     display: flex;
     justify-content: space-between;

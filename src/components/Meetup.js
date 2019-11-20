@@ -56,11 +56,12 @@ export class Meetup extends Component {
     return (
       <div>
         <div className="allMeetupInfo">
-          <div className="meetupInfo">
-            <div>
-              <h4 className="pageHeader">
+        <h4 className="pageHeader">
                 <b>{theMeetup.title}</b>
               </h4>
+          <div className="meetupInfo">
+            
+            <div>
               <p className="info">
                 <p className="bold">Creator:</p> {theMeetup.creator}
               </p>
