@@ -32,7 +32,7 @@ export class DeleteMeetup extends Component {
     return (
       <div>
         <form onSubmit={this.handleClick}>
-          <input type="submit" value="Delete this meetup"></input>
+          <input type="submit" value="Delete this Meetup" className="button"></input>
         </form>
       </div>
     );
