@@ -3,6 +3,7 @@ import EditMeetup from "./Inputs/EditMeetup";
 import ReactMapGL from "./Map/Map";
 import Attendees from "./Attendees/Attendees";
 import JoinMeetup from "./Inputs/JoinMeetup";
+import photo from "./boardGame.jpg";
 
 export class Meetup extends Component {
   constructor(props) {
@@ -51,41 +52,56 @@ export class Meetup extends Component {
     return (
       <div>
         <div className="allMeetupInfo">
-        <div className="meetupInfo">
-          <div>
-            <h4 className="eventName"><b>{theMeetup.title}</b></h4>
-            <p><b>Creator:</b> {theMeetup.creator}</p>
-            <p><b>Date:</b> {theMeetup.date}</p>
-            <p><b>Time:</b> {theMeetup.time}</p>
-            <p><b>Location:</b> {theMeetup.location}</p>
-            <p><b>Description:</b> {theMeetup.description}</p>
+          <div className="meetupInfo">
+            <div>
+              <h4 className="eventName">
+                <b>{theMeetup.title}</b>
+              </h4>
+              <p>
+                <b>Creator:</b> {theMeetup.creator}
+              </p>
+              <p>
+                <b>Date:</b> {theMeetup.date}
+              </p>
+              <p>
+                <b>Time:</b> {theMeetup.time}
+              </p>
+              <p>
+                <b>Location:</b> {theMeetup.location}
+              </p>
+              <p>
+                <b>Description:</b> {theMeetup.description}
+              </p>
+            </div>
+            <div>
+              <ReactMapGL />
+            </div>
           </div>
-          <div>
-            <ReactMapGL />
-          </div>
-        </div>
-<<<<<<< HEAD
-        <ul>{attendees}</ul>
-=======
-
->>>>>>> f35ddd0c09cec72925aed9917230d1f5ebd4e1e8
-        <JoinMeetup {...this.props} />
-        {theGame !== undefined ? (
-          <div className="GameInfo">
-            <img className="gameImg" alt="game" src={`${theGame.image_url}`} />
-            <h1>{theGame.name}</h1>
-            <p>{theGame.description}</p>
-            <a
-              href={theGame.official_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              More Information About {theGame.name}
-            </a>
-          </div>
-        ) : (
-          <p>No game information to display at this time.</p>
-        )}
+          <ul>{attendees}</ul>
+          <JoinMeetup {...this.props} />
+          {theGame !== undefined ? (
+            <div className="GameInfo">
+              <img
+                className="gameImg"
+                alt="game"
+                src={`${theGame.image_url}`}
+              />
+              <h1>{theGame.name}</h1>
+              <p>{theGame.description}</p>
+              <a
+                href={theGame.official_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                More Information About {theGame.name}
+              </a>
+            </div>
+          ) : (
+            <div>
+              <img src={photo} alt="game" />
+              <p>No game information to display at this time.</p>
+            </div>
+          )}
         </div>
         <EditMeetup getData={this.props.getData} {...this.props} />
       </div>
