@@ -9,10 +9,6 @@
     margin: auto;
 }
 
-/* .child {
-    margin: 0 auto;
-} */
-
 /* nav */
 .nav {
     height: 85px;
@@ -86,8 +82,7 @@ input:focus {
     outline: none;
 }
 
-/* 
-buttons */
+/* buttons */
 .button {
     padding: 10px 50px;
     margin: 10px 0px;
@@ -142,10 +137,20 @@ buttons */
 
 .attendees {
     display: flex;
+    justify-content: space-around;
     margin: 20px 0px;
     padding: 20px;
     /* font-size: 16px; */
     border: 20px #FCC133 solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.players {
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    padding: 0 0 10px 0;
 }
 
 .gameImg {

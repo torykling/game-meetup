@@ -81,9 +81,13 @@ export class Meetup extends Component {
               <ReactMapGL />
             </div>
           </div>
-          <p>Players:</p>
-          <ul>{attendees}</ul>
-          <JoinMeetup {...this.props} />
+          <div className="attendees">
+            <div>
+              <p className="players">Players</p>
+              <ul>{attendees}</ul>
+            </div>
+            <JoinMeetup {...this.props} />
+          </div>
           {theGame !== undefined ? (
             <div className="GameInfo">
               <img
