@@ -1,6 +1,7 @@
 import React from "react";
 import EditMeetup from "./Inputs/EditMeetup";
 import DeleteMeetup from "./Inputs/DeleteMeetup";
+import ReactMapGL from "./Map/Map";
 
 export default function Meetup(props) {
   let theMeetup;
@@ -30,6 +31,7 @@ export default function Meetup(props) {
         <div className="GameInfo">
           <h1>{theGame.name}</h1>
           <img src={`${theGame.image_url}`} />
+          <ReactMapGL />
         </div>
       ) : (
         ""
