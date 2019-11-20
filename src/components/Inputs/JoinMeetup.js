@@ -40,7 +40,7 @@ export class JoinMeetup extends Component {
           name="name"
           onChange={this.handleChange}
         ></input>
-        <input type="submit"></input>
+        <input type="submit" value="join"></input>
       </form>
     );
   }
