@@ -13,14 +13,15 @@ export default function Map(props) {
     longitude: -77.050636,
     // latitude: props.latitude,
     // longitude: props.longitude,
-    height: "50vh",
-    width: "50vw",
+    height: "35vh",
+    width: "35vw",
     zoom: 10
   });
 
   return (
     <div>
       <ReactMapGL
+        className="map"
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         // the token is in the .env.local file; this is included in .gitignore, so the token is hidden in the repo
