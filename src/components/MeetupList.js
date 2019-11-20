@@ -20,11 +20,13 @@ export class MeetupList extends Component {
       return (
         <div key={meetup._id} className="meetupCard">
           <div className="imgDiv">
-            {meetupImageUrl ? (
-              <img alt="game" src={meetupImageUrl} />
-            ) : (
-              <img src={photo} alt="game" />
-            )}
+            <Link to={`/meetup/id/${meetup._id}`}>
+              {meetupImageUrl ? (
+                <img alt="game" src={meetupImageUrl} />
+              ) : (
+                <img src={photo} alt="game" />
+              )}
+            </Link>
           </div>
 
           <div className="infoDiv">

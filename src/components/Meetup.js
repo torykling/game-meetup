@@ -47,7 +47,11 @@ export class Meetup extends Component {
       }
     });
     const attendees = theMeetup.attendees.map(attendee => {
-      return <li key={attendee}>{attendee}</li>;
+      return (
+        <li key={attendee + theMeetup.attendees.indexOf(attendee)}>
+          {attendee}
+        </li>
+      );
     });
     return (
       <div>
@@ -104,7 +108,11 @@ export class Meetup extends Component {
             </div>
           )}
         </div>
-        <EditMeetup getData={this.props.getData} {...this.props} />
+        <EditMeetup
+          getData={this.props.getData}
+          {...this.props}
+          meetup={theMeetup}
+        />
       </div>
     );
   }
