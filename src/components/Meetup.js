@@ -45,7 +45,9 @@ export class Meetup extends Component {
         console.log(theGame);
       }
     });
-
+    const attendees = theMeetup.attendees.map(attendee => {
+      return <li key={attendee}>{attendee}</li>;
+    });
     return (
       <div>
         <h3>Edit this meetup</h3>
@@ -60,6 +62,7 @@ export class Meetup extends Component {
           <h3>{theMeetup.description}</h3>
           <ReactMapGL />
         </div>
+        <ul>{attendees}</ul>
         <JoinMeetup {...this.props} />
         {theGame !== undefined ? (
           <div className="GameInfo">
