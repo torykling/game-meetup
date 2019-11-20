@@ -1,4 +1,3 @@
-// import React from "react";
 import { Link } from "react-router-dom";
 import NewMeetup from "./Inputs/NewMeetup";
 
@@ -10,6 +9,13 @@ export class MeetupList extends Component {
   }
   render() {
     let meetups = this.props.meetups.map(meetup => {
+      let meetupImageUrl;
+      this.props.games
+        .filter(game => game.name === meetup.game)
+        .map(game => {
+          return (meetupImageUrl = game.image_url);
+        });
+
       return (
         <div key={meetup._id}>
           <Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link>
@@ -17,7 +23,11 @@ export class MeetupList extends Component {
           <h6>{meetup.game}</h6>
           <h6>{meetup.date}</h6>
           <h6>{meetup.time}</h6>
-          <img src={meetup.image_url}></img>
+          {meetupImageUrl ? (
+            <img alt="game" src={meetupImageUrl} />
+          ) : (
+            <img src="#" alt="game" />
+          )}
         </div>
       );
     });

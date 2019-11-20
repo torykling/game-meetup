@@ -39,14 +39,15 @@ export class Meetup extends Component {
           <div className="GameInfo">
             <h1>{theGame.name}</h1>
             <h3>{theGame.description}</h3>
-            <img src={`${theGame.image_url}`} />
-            {theGame.official_url ? (
-              <a src={`${theGame.official_url}`}>
-                More Information About {theGame.name}
-              </a>
-            ) : (
-              " "
-            )}
+            <img alt="game" src={`${theGame.image_url}`} />
+
+            <a
+              href={theGame.official_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              More Information About {theGame.name}
+            </a>
           </div>
         ) : (
           <p>No game information to display at this time.</p>

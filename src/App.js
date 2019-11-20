@@ -26,7 +26,7 @@ export default class App extends Component {
       .get("https://game-meetup-api.herokuapp.com/")
       .then(res => {
         this.setState({ meetups: res.data });
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch(err => console.log(err));
     axios
