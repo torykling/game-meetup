@@ -1,13 +1,14 @@
-* {
+.App {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* body */
 .content-wrap {
-    display: flex;
-    justify-content: center;
-    /* width: 75vw; */
+    width: 75vw;
 }
 
 /* nav */
@@ -54,17 +55,20 @@
     font-size: 20px;
     margin: 20px 0px;
     padding: 20px;
-    border: 1px solid darkgrey;
     border-radius: 20px;
+    box-shadow: 5px 5px 10px darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .textInput {
-    width: 100%;
+    width: 94%;
     padding: 10px;
 }
 
 .halfTextInput {
-    width: 50%;
+    width: 45%;
     padding: 10px;
 }
 /* 
@@ -72,13 +76,12 @@ buttons */
 .button {
     padding: 10px 50px;
     margin: 10px 0px;
-    color: white;
     border-radius: 4px;
-    background-color: dimgrey;
+    background-color: #FCC133;
 }
 
 .button:hover {
-    background-color: grey;
+    background-color: #dba82e;
 }
 
 /* meetup list page */
@@ -86,9 +89,9 @@ buttons */
     display: flex;
     margin: 20px 0px;
     padding: 20px;
-    border: 1px solid darkgrey;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 16px;
+    box-shadow: 5px 5px 10px darkgrey;
 }
 
 .imgDiv {
@@ -99,6 +102,12 @@ buttons */
 
 .infoDiv {
     padding: 20px;
+}
+
+.eventName {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 /* footer */

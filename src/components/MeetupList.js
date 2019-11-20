@@ -26,11 +26,11 @@ export class MeetupList extends Component {
             )}
           </div>
           <div className="infoDiv">
-            <Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link>
-            <h6>{meetup.creator}</h6>
-            <h6>{meetup.game}</h6>
-            <h6>{meetup.date}</h6>
-            <h6>{meetup.time}</h6>
+            <h4 className="eventName"><Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link></h4>
+            <p><b>Creator:</b> {meetup.creator}</p>
+            <p><b>Game:</b> {meetup.game}</p>
+            <p><b>Date:</b> {meetup.date}</p>
+            <p><b>Time:</b> {meetup.time}</p>
           </div>
         </div>
       );

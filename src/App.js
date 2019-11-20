@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./Reset.css";
 import { Route, Link } from "react-router-dom";
 import Meetup from "./components/Meetup";
 import MeetupList from "./components/MeetupList";
@@ -41,7 +42,7 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="App">
         <nav>
           <Nav />
         </nav>
