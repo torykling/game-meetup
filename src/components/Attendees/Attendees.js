@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import Button from "./Button/Button";
+import Button from "../Buttons/Button";
 import { conditionalExpression } from '@babel/types';
 
 class Attendees extends Component {
@@ -21,8 +21,8 @@ class Attendees extends Component {
             </ul>
             </div>
             <div>
-                {/* <JoinMeetup />
-                <Button /> */}
+                {/* <JoinMeetup /> */}
+                <Button />
             </div>
             </div>
         );
