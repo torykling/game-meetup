@@ -58,23 +58,23 @@ export class Meetup extends Component {
         <div className="allMeetupInfo">
           <div className="meetupInfo">
             <div>
-              <h4 className="eventName">
+              <h4 className="pageHeader">
                 <b>{theMeetup.title}</b>
               </h4>
-              <p>
-                <b>Creator:</b> {theMeetup.creator}
+              <p className="info">
+                <p className="bold">Creator:</p> {theMeetup.creator}
               </p>
-              <p>
-                <b>Date:</b> {theMeetup.date}
+              <p className="info">
+                <p className="bold">Date:</p> {theMeetup.date}
               </p>
-              <p>
-                <b>Time:</b> {theMeetup.time}
+              <p className="info">
+                <p className="bold">Time:</p> {theMeetup.time}
               </p>
-              <p>
-                <b>Location:</b> {theMeetup.location}
+              <p className="info">
+                <p className="bold">Location:</p> {theMeetup.location}
               </p>
-              <p>
-                <b>Description:</b> {theMeetup.description}
+              <p className="info">
+                <p className="bold">Description:</p> {theMeetup.description}
               </p>
             </div>
             <div>
@@ -95,9 +95,10 @@ export class Meetup extends Component {
                 alt="game"
                 src={`${theGame.image_url}`}
               />
-              <h1>{theGame.name}</h1>
+              <h1 className="bold">{theGame.name}</h1>
               <p>{theGame.description}</p>
               <a
+                className="linkBlack bold"
                 href={theGame.official_url}
                 target="_blank"
                 rel="noopener noreferrer"

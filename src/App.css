@@ -29,10 +29,23 @@
 .link {
     text-decoration: none;
     color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.linkBlack {
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+.linkBlack:hover {
+    text-decoration: none;
 }
 
 .link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* headers */
@@ -92,6 +105,7 @@ input:focus {
 
 .button:hover {
     background-color: #dba82e;
+    cursor: pointer;
 }
 
 /* meetup list page */
@@ -110,16 +124,26 @@ input:focus {
 
 .imgDiv {
     width: 350px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .infoDiv {
     padding: 20px;
+    width: 35%;
+}
+
+.info {
+    line-height: 1.5;
+    padding: 5px 5px 0 5px;
+}
+
+.bold {
+    font-weight: bold;
+    padding: 5px 0;
 }
 
 .eventName {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     color: black;
     padding: 10px 0px;
@@ -171,4 +195,10 @@ footer {
     padding: 0px 20px;
     color: white;
     margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+.footer {
+    padding: 30px;
+
 }
