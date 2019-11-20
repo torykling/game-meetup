@@ -45,22 +45,30 @@
     padding: 20px;
 }
 
-.formHeader {
+.accordion {
     font-size: 20px;
     margin: 3px auto;
     text-align: center;
+    background-color: #FCC133;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    transition: 0.4s;
 }
 
 /* new meetup */
+/* .panel {
+    display: none;
+    overflow: hidden;
+} */
+
 .newMeetup, .editMeetup {
     font-size: 20px;
     margin: 20px 0px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px darkgrey;
-    display: flex;
-    flex-wrap: wrap;
-
 }
 
 .textInput {
@@ -72,6 +80,10 @@
     width: 45%;
     padding: 10px;
 }
+input:focus {
+    outline: none;
+}
+
 /* 
 buttons */
 .button {
