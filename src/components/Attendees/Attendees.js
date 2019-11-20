@@ -11,7 +11,6 @@ class Attendees extends Component {
     render(){
         return (
             <div className="attendees">
-            {/* <Button /> */}
             <div>
             <h2>Attendees here!</h2>
             <ul>

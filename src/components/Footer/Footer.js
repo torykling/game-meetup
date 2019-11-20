@@ -7,12 +7,12 @@ const Footer= (props) => {
         <div className="footer">
             Data for Games API gathered from{" "}
             <a
-            className="a"
+            className="link"
             href="https://www.boardgameatlas.com/api/docs"
             target="_blank"
             rel="noopener noreferrer"
             >
-                Board Game Atlas
+                <b>Board Game Atlas</b>
             </a>
         </div>
     )

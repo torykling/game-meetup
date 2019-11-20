@@ -46,6 +46,7 @@ export default class App extends Component {
           <Nav />
         </nav>
         <div className="content-wrap">
+          <div className="child">
           <Route path="/" exact render={this.doThisWhileLoading}></Route>
           <Route
             path="/meetup/id/:id"
@@ -54,6 +55,7 @@ export default class App extends Component {
               <Meetup getData={this.getData} {...routerProps} {...this.state} />
             )}
           />
+          </div>
         </div>
         <footer>
           <Footer />
