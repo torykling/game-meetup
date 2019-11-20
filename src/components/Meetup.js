@@ -24,7 +24,6 @@ export class Meetup extends Component {
 
     return (
       <div>
-        <EditMeetup getData={this.props.getData} {...this.props} />
         <div className="allMeetupInfo">
         <div className="meetupInfo">
           <div>
@@ -58,6 +57,7 @@ export class Meetup extends Component {
           <p>No game information to display at this time.</p>
         )}
         </div>
+        <EditMeetup getData={this.props.getData} {...this.props} />
       </div>
     );
   }
