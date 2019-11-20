@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 export class DeleteMeetup extends Component {
   constructor(props) {
@@ -25,9 +26,11 @@ export class DeleteMeetup extends Component {
       .catch(err => console.log(err));
   };
   render() {
+    if (this.state.isDeleted) {
+      return <Redirect to={"/"} />;
+    }
     return (
       <div>
-        {this.isDeleted ? <h1>This meetup has been deleted.</h1> : " "}
         <form onSubmit={this.handleClick}>
           <input type="submit" value="Delete this meetup"></input>
         </form>

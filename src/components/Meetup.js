@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EditMeetup from "./Inputs/EditMeetup";
 import DeleteMeetup from "./Inputs/DeleteMeetup";
-import JoinMeetup from "./Inputs/JoinMeetup";
+// import JoinMeetup from "./Inputs/JoinMeetup";
 
 export class Meetup extends Component {
   render() {
@@ -23,6 +23,7 @@ export class Meetup extends Component {
 
     return (
       <div>
+        <h3>Edit this meetup</h3>
         <EditMeetup getData={this.props.getData} {...this.props} />
         <DeleteMeetup {...this.props} />
         <div className="MeetupInfo">
@@ -33,7 +34,7 @@ export class Meetup extends Component {
           <h3>{theMeetup.location}</h3>
           <h3>{theMeetup.description}</h3>
         </div>
-        <JoinMeetup />
+        {/* <JoinMeetup /> */}
         {theGame !== undefined ? (
           <div className="GameInfo">
             <h1>{theGame.name}</h1>
