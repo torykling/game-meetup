@@ -1,16 +1,23 @@
 .App {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 /* body */
 .content-wrap {
     width: 75vw;
+<<<<<<< HEAD
+=======
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+>>>>>>> afd95d39453f5b4dade3127832ffef35f716be0e
     margin: auto;
 }
+
+/* .child {
+    margin: 0 auto;
+} */
 
 /* nav */
 .nav {
