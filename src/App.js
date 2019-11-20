@@ -9,13 +9,24 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = { games: null, meetups: null };
+    this.getData = this.getData.bind(this);
   }
   componentDidMount() {
+    this.getData();
+  }
+  doThisWhileLoading = () => {
+    if (this.state.games !== null && this.state.meetups !== null) {
+      return <MeetupList getData={this.getData} {...this.state} />;
+    } else {
+      return <h1>Loading...</h1>;
+    }
+  };
+  getData = () => {
     axios
       .get("https://game-meetup-api.herokuapp.com/")
       .then(res => {
         this.setState({ meetups: res.data });
-        // console.log(res.data);
+        console.log(res.data);
       })
       .catch(err => console.log(err));
     axios
@@ -25,15 +36,7 @@ export default class App extends Component {
         // console.log(res.data);
       })
       .catch(err => console.log(err));
-  }
-  doThisWhileLoading = () => {
-    if (this.state.games !== null && this.state.meetups !== null) {
-      return <MeetupList {...this.state} />;
-    } else {
-      return <h1>Loading...</h1>;
-    }
   };
-
   render() {
     return (
       <div>
@@ -43,24 +46,24 @@ export default class App extends Component {
           </Link>
         </nav>
         <div className="content-wrap">
-          {/* <Route
-            path="/"
-            exact
-            render={routerProps => (
-              <MeetupList {...routerProps} {...this.state} />
-            )}
-          /> */}
           <Route path="/" exact render={this.doThisWhileLoading}></Route>
           <Route
             path="/meetup/id/:id"
             exact
-            render={routerProps => <Meetup {...routerProps} {...this.state} />}
+            render={routerProps => (
+              <Meetup getData={this.getData} {...routerProps} {...this.state} />
+            )}
           />
         </div>
         <footer className="footer">
           Data for Games API gathered from{" "}
-          <a className="a" href="#" target="_blank" rel="noopener noreferrer">
-            Games API
+          <a
+            className="a"
+            href="https://www.boardgameatlas.com/api/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Board Game Atlas
           </a>
         </footer>
       </div>
