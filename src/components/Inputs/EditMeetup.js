@@ -28,6 +28,7 @@ export class EditMeetup extends Component {
       "https://game-meetup-api.herokuapp.com/meetup/id/" + this.state.meetupId;
     axios
       .put(url, {
+        title: this.state.title,
         game: this.state.game,
         date: this.state.date,
         time: this.state.time,

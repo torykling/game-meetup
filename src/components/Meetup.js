@@ -47,7 +47,11 @@ export class Meetup extends Component {
       }
     });
     const attendees = theMeetup.attendees.map(attendee => {
-      return <li key={attendee}>{attendee}</li>;
+      return (
+        <li key={attendee + theMeetup.attendees.indexOf(attendee)}>
+          {attendee}
+        </li>
+      );
     });
     return (
       <div>
