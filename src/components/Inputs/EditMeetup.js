@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import DeleteMeetup from "./DeleteMeetup";
 
 export class EditMeetup extends Component {
   constructor(props) {
@@ -42,50 +43,59 @@ export class EditMeetup extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="editMeetup">
+        <h2 className="formHeader">Edit This Meetup</h2>
         <input
           type="text"
           name="title"
           onChange={this.handleChange}
           placeholder="Title"
+          className="textInput"
         />
         <input
           type="text"
           name="game"
           onChange={this.handleChange}
           placeholder="Game"
+          className="textInput"
         />
         <input
           type="text"
           name="date"
           onChange={this.handleChange}
           placeholder="date (mm-dd-yyyy)"
+          className="halfTextInput"
         />
         <input
           type="text"
           name="time"
           onChange={this.handleChange}
           placeholder="time (e.g 4:00pm)"
+          className="halfTextInput"
         />
         <input
           type="text"
           name="creator"
           onChange={this.handleChange}
           placeholder="Creator Name"
+          className="textInput"
         />
         <input
           type="text"
           name="location"
           onChange={this.handleChange}
           placeholder="address"
+          className="textInput"
         />
         <input
           type="text"
           name="message"
           onChange={this.handleChange}
           placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
+          className="textInput"
         />
-        <input type="submit" />
+        <input type="submit" className="button" value="Edit this Meetup"/>
+        <DeleteMeetup {...this.props} />
       </form>
     );
   }

@@ -42,5 +42,3 @@ export default function Map(props) {
     </div>
   );
 }
-
-// https://www.youtube.com/watch?v=JJatzkPcmoI
