@@ -11,18 +11,18 @@ class Attendees extends Component {
     render(){
         return (
             <div className="attendees">
-            <div>
-            <h2>Attendees here!</h2>
-            <ul>
-                <li>Bob</li>
-                <li>Mary</li>
-                <li>Larry</li>
-            </ul>
-            </div>
-            <div>
-                {/* <JoinMeetup /> */}
-                <Button />
-            </div>
+                <div>
+                    <h2>Attendees here!</h2>
+                    <ul>
+                        <li>Bob</li>
+                        <li>Mary</li>
+                        <li>Larry</li>
+                    </ul>
+                </div>
+                <div>
+                    {/* <JoinMeetup /> */}
+                    <Button />
+                </div>
             </div>
         );
     }

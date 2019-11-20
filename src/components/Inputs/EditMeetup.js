@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import DeleteMeetup from "./DeleteMeetup";
 
 export class EditMeetup extends Component {
   constructor(props) {
@@ -93,7 +94,8 @@ export class EditMeetup extends Component {
           placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
           className="textInput"
         />
-        <input type="submit" className="button"/>
+        <input type="submit" className="button" value="Edit this Meetup"/>
+        <DeleteMeetup {...this.props} />
       </form>
     );
   }

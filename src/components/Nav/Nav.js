@@ -6,9 +6,8 @@ const Nav= (props) => {
     let classList = 'nav'
     return(
         <div className={classList}>
-            <h1 className="header">bgm.</h1>
-            <Link className="home" to="/">
-                Meetups
+            <Link className="header" to="/">
+                bgm.
             </Link>
         </div>
     )
