@@ -2,9 +2,32 @@ import React, { Component } from "react";
 import EditMeetup from "./Inputs/EditMeetup";
 import ReactMapGL from "./Map/Map";
 import Attendees from "./Attendees/Attendees";
-// import JoinMeetup from "./Inputs/JoinMeetup";
+import JoinMeetup from "./Inputs/JoinMeetup";
 
 export class Meetup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      latitude: 0,
+      longitude: 0
+    };
+    // this.getLocation = this.getLocation.bind(this);
+  }
+
+  // getLocation = location => {
+  //   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=pk.eyJ1IjoiYm9hcmQtZ2FtZS1tZWV0dXAiLCJhIjoiY2szN2UxZG55MGFtbDNnbXI4b2w2b2YyMiJ9.TLHV3tXVaIJkW3Fz52QyxA`;
+  //   const encodedLocation = encodeURI(url);
+  //   console.log(encodedLocation);
+  //   fetch(encodedLocation)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       this.setState({ latitude: res.features.center[0] });
+  //       this.setState({ longitude: res.features.center[1] });
+  //       console.log(this.state.latitude);
+  //       console.log(this.state.longitude);
+  //     })
+  //     .catch(err => console.log(err));
+  // };
   render() {
     let theMeetup;
     let theGame;
@@ -13,6 +36,7 @@ export class Meetup extends Component {
       if (meetup._id === this.props.match.params.id) {
         theMeetup = meetup;
         console.log(theMeetup);
+        // this.getLocation(meetup.location);
       }
     });
     this.props.games.forEach(game => {
@@ -38,8 +62,8 @@ export class Meetup extends Component {
             <ReactMapGL />
           </div>
         </div>
-        <Attendees />
-        {/* <JoinMeetup /> */}
+
+        <JoinMeetup {...this.props} />
         {theGame !== undefined ? (
           <div className="GameInfo">
             <img className="gameImg" alt="game" src={`${theGame.image_url}`} />
