@@ -6,12 +6,6 @@
 /* body */
 .content-wrap {
     width: 75vw;
-<<<<<<< HEAD
-=======
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
->>>>>>> afd95d39453f5b4dade3127832ffef35f716be0e
     margin: auto;
 }
 
