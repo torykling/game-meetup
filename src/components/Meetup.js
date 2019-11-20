@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import EditMeetup from "./Inputs/EditMeetup";
 import DeleteMeetup from "./Inputs/DeleteMeetup";
 import ReactMapGL from "./Map/Map";
+import Attendees from "./Attendees/Attendees";
+import Nav from "./Nav/Nav";
 // import JoinMeetup from "./Inputs/JoinMeetup";
 
 export class Meetup extends Component {
@@ -24,6 +26,7 @@ export class Meetup extends Component {
 
     return (
       <div>
+        <Nav />
         <h3>Edit this meetup</h3>
         <EditMeetup getData={this.props.getData} {...this.props} />
         <DeleteMeetup {...this.props} />
@@ -36,6 +39,7 @@ export class Meetup extends Component {
           <h3>{theMeetup.description}</h3>
           <ReactMapGL />
         </div>
+        <Attendees />
         {/* <JoinMeetup /> */}
         {theGame !== undefined ? (
           <div className="GameInfo">

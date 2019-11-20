@@ -3,6 +3,8 @@ import "./App.css";
 import { Route, Link } from "react-router-dom";
 import Meetup from "./components/Meetup";
 import MeetupList from "./components/MeetupList";
+import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
 import axios from "axios";
 
 export default class App extends Component {
@@ -41,9 +43,7 @@ export default class App extends Component {
     return (
       <div>
         <nav>
-          <Link className="home" to="/">
-            Home
-          </Link>
+          <Nav />
         </nav>
         <div className="content-wrap">
           <Route path="/" exact render={this.doThisWhileLoading}></Route>
@@ -55,16 +55,8 @@ export default class App extends Component {
             )}
           />
         </div>
-        <footer className="footer">
-          Data for Games API gathered from{" "}
-          <a
-            className="a"
-            href="https://www.boardgameatlas.com/api/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Board Game Atlas
-          </a>
+        <footer>
+          <Footer />
         </footer>
       </div>
     );
