@@ -25,6 +25,7 @@ export class NewMeetup extends Component {
 
     axios
       .post("https://game-meetup-api.herokuapp.com/meetup", {
+        title: this.state.title,
         game: this.state.game,
         date: this.state.date,
         time: this.state.time,
@@ -34,6 +35,7 @@ export class NewMeetup extends Component {
       })
       .then(res => {
         console.log(res);
+        this.props.getData();
       })
       .catch(err => console.log(err));
   };

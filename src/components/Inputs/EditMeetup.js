@@ -5,7 +5,6 @@ export class EditMeetup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // make sure we can grab this meetupId
       meetupId: this.props.match.params.id,
       title: null,
       game: null,
@@ -37,6 +36,7 @@ export class EditMeetup extends Component {
       })
       .then(res => {
         console.log(res);
+        this.props.getData();
       })
       .catch(err => console.log(err));
   };

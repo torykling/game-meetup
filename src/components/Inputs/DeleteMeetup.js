@@ -6,8 +6,8 @@ export class DeleteMeetup extends Component {
     console.log(props.match.params.id);
     super(props);
     this.state = {
-      // need to make sure we can grab the meetup id
-      meetupId: this.props.match.params.id
+      meetupId: this.props.match.params.id,
+      isDeleted: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -20,14 +20,18 @@ export class DeleteMeetup extends Component {
       .delete(url)
       .then(res => {
         console.log(res);
+        this.setState({ isDeleted: true });
       })
       .catch(err => console.log(err));
   };
   render() {
     return (
-      <form onSubmit={this.handleClick}>
-        <input type="submit" value="Delete this meetup"></input>
-      </form>
+      <div>
+        {this.isDeleted ? <h1>This meetup has been deleted.</h1> : " "}
+        <form onSubmit={this.handleClick}>
+          <input type="submit" value="Delete this meetup"></input>
+        </form>
+      </div>
     );
   }
 }
