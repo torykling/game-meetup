@@ -17,24 +17,28 @@ export class MeetupList extends Component {
         });
 
       return (
-        <div key={meetup._id}>
-          <Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link>
-          <h6>{meetup.creator}</h6>
-          <h6>{meetup.game}</h6>
-          <h6>{meetup.date}</h6>
-          <h6>{meetup.time}</h6>
-          {meetupImageUrl ? (
-            <img alt="game" src={meetupImageUrl} />
-          ) : (
-            <img src="#" alt="game" />
-          )}
+        <div key={meetup._id} className="meetupCard">
+          <div className="imgDiv">
+            {meetupImageUrl ? (
+              <img alt="game" src={meetupImageUrl} />
+            ) : (
+              <img src="#" alt="game" />
+            )}
+          </div>
+          <div className="infoDiv">
+            <Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link>
+            <h6>{meetup.creator}</h6>
+            <h6>{meetup.game}</h6>
+            <h6>{meetup.date}</h6>
+            <h6>{meetup.time}</h6>
+          </div>
         </div>
       );
     });
 
     return (
       <div>
-        <h1>Game Meetups</h1>
+        <h1 className="pageHeader">Game Meetups</h1>
         <NewMeetup getData={this.props.getData} />
         <div>{meetups}</div>
       </div>

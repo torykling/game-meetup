@@ -7,6 +7,7 @@
 .content-wrap {
     display: flex;
     justify-content: center;
+    /* width: 75vw; */
 }
 
 /* nav */
@@ -35,11 +36,26 @@
     text-decoration: underline;
 }
 
+/* headers */
+.pageHeader {
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.formHeader {
+    font-size: 20px;
+    margin: 3px auto;
+    text-align: center;
+}
+
 /* new meetup */
 .newMeetup, .editMeetup {
-    width: 50vw;
     font-size: 20px;
-    margin: 20px;
+    margin: 20px 0px;
+    padding: 20px;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
 }
 
 .textInput {
@@ -54,7 +70,8 @@
 /* 
 buttons */
 .button {
-    padding: 5px 25px;
+    padding: 10px 50px;
+    margin: 10px 0px;
     color: white;
     border-radius: 4px;
     background-color: dimgrey;
@@ -62,6 +79,26 @@ buttons */
 
 .button:hover {
     background-color: grey;
+}
+
+/* meetup list page */
+.meetupCard {
+    display: flex;
+    margin: 20px 0px;
+    padding: 20px;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.imgDiv {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.infoDiv {
+    padding: 20px;
 }
 
 /* footer */

@@ -42,6 +42,7 @@ export class NewMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit} className="newMeetup">
+        <h2 className="formHeader">Create a New Meetup</h2>
         <input
           type="text"
           name="title"
@@ -91,7 +92,7 @@ export class NewMeetup extends Component {
           placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
           className="textInput"
         /><br/>
-        <input type="submit" className="button"/>
+        <input type="submit" className="button" />
       </form>
     );
   }

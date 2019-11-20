@@ -43,6 +43,7 @@ export class EditMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="editMeetup">
+        <h2 className="formHeader">Edit This Meetup</h2>
         <input
           type="text"
           name="title"
