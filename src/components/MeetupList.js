@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import NewMeetup from "./Inputs/NewMeetup";
+import photo from "./boardGame.jpg";
 
 import React, { Component } from "react";
 
@@ -22,15 +23,26 @@ export class MeetupList extends Component {
             {meetupImageUrl ? (
               <img alt="game" src={meetupImageUrl} />
             ) : (
-              <img src="#" alt="game" />
+              <img src={photo} alt="game" />
             )}
           </div>
+
           <div className="infoDiv">
-            <h4 className="eventName"><Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link></h4>
-            <p><b>Creator:</b> {meetup.creator}</p>
-            <p><b>Game:</b> {meetup.game}</p>
-            <p><b>Date:</b> {meetup.date}</p>
-            <p><b>Time:</b> {meetup.time}</p>
+            <h4 className="eventName">
+              <Link to={`/meetup/id/${meetup._id}`}>{meetup.title}</Link>
+            </h4>
+            <p>
+              <b>Creator:</b> {meetup.creator}
+            </p>
+            <p>
+              <b>Game:</b> {meetup.game}
+            </p>
+            <p>
+              <b>Date:</b> {meetup.date}
+            </p>
+            <p>
+              <b>Time:</b> {meetup.time}
+            </p>
           </div>
         </div>
       );
