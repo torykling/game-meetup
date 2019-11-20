@@ -7,13 +7,13 @@ export class EditMeetup extends Component {
     super(props);
     this.state = {
       meetupId: this.props.match.params.id,
-      title: null,
-      game: null,
-      date: null,
-      time: null,
-      creator: null,
-      location: null,
-      message: null
+      title: props.meetup.title,
+      game: props.meetup.game,
+      date: props.meetup.date,
+      time: props.meetup.time,
+      creator: props.meetup.creator,
+      location: props.meetup.location,
+      message: props.meetup.message
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

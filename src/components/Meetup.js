@@ -108,7 +108,11 @@ export class Meetup extends Component {
             </div>
           )}
         </div>
-        <EditMeetup getData={this.props.getData} {...this.props} />
+        <EditMeetup
+          getData={this.props.getData}
+          {...this.props}
+          meetup={theMeetup}
+        />
       </div>
     );
   }
