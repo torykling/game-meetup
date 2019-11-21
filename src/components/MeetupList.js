@@ -33,18 +33,18 @@ export class MeetupList extends Component {
             <h4>
               <Link to={`/meetup/id/${meetup._id}`} className="eventName">{meetup.title}</Link>
             </h4>
-            <p className="info">
+            <div className="info">
               <p className="bold">Creator</p> {meetup.creator}
-            </p>
-            <p className="info">
+            </div>
+            <div className="info">
               <p className="bold">Game</p> {meetup.game}
-            </p>
-            <p className="info">
+            </div>
+            <div className="info">
               <p className="bold">Date</p> {meetup.date}
-            </p>
-            <p className="info">
+            </div>
+            <div className="info">
               <p className="bold">Time</p> {meetup.time}
-            </p>
+            </div>
           </div>
         </div>
       );

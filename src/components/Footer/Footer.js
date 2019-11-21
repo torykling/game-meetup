@@ -1,7 +1,6 @@
 import React from "react";
 
-const Footer = props => {
-  let classList = "nav";
+const Footer = () => {
   return (
     <div className="footer">
       Data for Games API gathered from{" "}
