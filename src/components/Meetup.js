@@ -39,6 +39,9 @@ export class Meetup extends Component {
                 <p className="bold">Creator:</p> {theMeetup.creator}
               </p>
               <p className="info">
+                <p className="bold">Game:</p> {theMeetup.game}
+              </p>
+              <p className="info">
                 <p className="bold">Date:</p> {theMeetup.date}
               </p>
               <p className="info">
