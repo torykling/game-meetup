@@ -14,7 +14,7 @@ This application is called bgm, or Board Game Meetups. The idea is to be able to
 Simply input the event you'd like to set up in the form available on the front page! Below that form on the front page will be other events people have created. Click on an established event to see the name of who created it, the game they'll play, and who is attending. For the location, there doesn't need to be an exact address for the location, so long as Google Maps understands where you'd like to go. On the specific event page itself, there'll be more informaton about the game of choice with a description along with either an official website or the Board Game Atlas website.
 
 ### Approach 
-Since this was a group project, we wanted to take an approach that would complement our skillsets. With this project, we wanted to focus on making an elegantly styled site that ran smoothly with user consideration in mind. Our big goal was to ensure CRUD functionality was performing smoothly in React. 
+Since this was a group project, we wanted to take an approach that would complement our skillsets. With this project, we wanted to focus on making an elegantly styled site that ran smoothly with user consideration in mind. Our big goal was to ensure CRUD functionality was performing smoothly in React. We also chose to implement components through Storybook into our visual design. That repo can be found [here](https://github.com/shelbyvjacobs/game-meetup-component-library).
 
 ### Screenshots
 ![](https://i.imgur.com/SEIoKS6.png)
@@ -36,6 +36,7 @@ Currently attempting to fix some minor features such as description showing up a
 * MongoDB
 * React 
 * Express
+* Storybook
 
 ### Installation Directions
 1. Fork the directory to your personal Github account
