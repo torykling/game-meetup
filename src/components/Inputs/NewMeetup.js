@@ -62,14 +62,14 @@ export class NewMeetup extends Component {
             type="text"
             name="date"
             onChange={this.handleChange}
-            placeholder="date (mm-dd-yyyy)"
+            placeholder="Date (mm-dd-yyyy)"
             className="textInput"
           />
           <input
             type="text"
             name="time"
             onChange={this.handleChange}
-            placeholder="time (e.g 4:00pm)"
+            placeholder="Time (e.g 4:00pm)"
             className="textInput"
           />
           <input
@@ -83,14 +83,14 @@ export class NewMeetup extends Component {
             type="text"
             name="location"
             onChange={this.handleChange}
-            placeholder="address"
+            placeholder="Address"
             className="textInput"
           />
           <input
             type="text"
             name="description"
             onChange={this.handleChange}
-            placeholder="description (e.g. Come to this fun meetup to play Scrabble!)"
+            placeholder="Description (e.g. Come to this fun meetup to play Scrabble!)"
             className="textInput"
           />
           <input type="submit" className="button" />
