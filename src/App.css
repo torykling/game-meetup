@@ -155,6 +155,10 @@ input:focus {
     width: 95%;
 }
 
+.mapDiv {
+    width: 100%;
+}
+
 .map {
     padding: 0px 20px 10px 20px;
 }
