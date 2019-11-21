@@ -68,11 +68,13 @@
     transition: 0.4s;
 }
 
+
 /* new meetup */
-/* .panel {
-    display: none;
-    overflow: hidden;
-} */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .newMeetup, .editMeetup {
     font-size: 20px;
@@ -83,14 +85,10 @@
 }
 
 .textInput {
-    width: 94%;
+    width: 96%;
     padding: 10px;
 }
 
-.halfTextInput {
-    width: 45%;
-    padding: 10px;
-}
 input:focus {
     outline: none;
 }
@@ -101,6 +99,7 @@ input:focus {
     margin: 10px 0px;
     border-radius: 4px;
     background-color: #FCC133;
+    max-width: 150px;
 }
 
 .button:hover {
@@ -168,7 +167,6 @@ input:focus {
     justify-content: space-around;
     margin: 20px 0px;
     padding: 20px;
-    /* font-size: 16px; */
     border: 20px #FCC133 solid;
     border-radius: 20px;
     text-align: center;
@@ -189,6 +187,15 @@ input:focus {
 .GameInfo {
     padding: 10px;
     line-height: 1.4;
+}
+
+/* delete form */
+.warning {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
 }
 
 /* footer */

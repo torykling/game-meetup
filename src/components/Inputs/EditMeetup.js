@@ -68,14 +68,14 @@ export class EditMeetup extends Component {
               name="date"
               onChange={this.handleChange}
               placeholder="date (mm-dd-yyyy)"
-              className="halfTextInput"
+              className="textInput"
             />
             <input
               type="text"
               name="time"
               onChange={this.handleChange}
               placeholder="time (e.g 4:00pm)"
-              className="halfTextInput"
+              className="textInput"
             />
             <input
               type="text"
@@ -98,7 +98,7 @@ export class EditMeetup extends Component {
               placeholder="meetup description (e.g. Come to this fun meetup to play Scrabble!)"
               className="textInput"
             />
-            <input type="submit" className="button" value="Edit this Meetup" />
+            <input type="submit" className="button panel" value="Edit this Meetup" />
           </div>
         </form>
         <DeleteMeetup {...this.props} />
