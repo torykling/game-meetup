@@ -12,7 +12,7 @@ const Footer= (props) => {
             target="_blank"
             rel="noopener noreferrer"
             >
-                <b>Board Game Atlas</b>
+                Board Game Atlas
             </a>
         </div>
     )

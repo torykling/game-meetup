@@ -21,7 +21,7 @@ export default class App extends Component {
     if (this.state.games !== null && this.state.meetups !== null) {
       return <MeetupList getData={this.getData} {...this.state} />;
     } else {
-      return <h1>Loading...</h1>;
+      return <h1 className="pageHeader">Loading...</h1>;
     }
   };
   getData = () => {
