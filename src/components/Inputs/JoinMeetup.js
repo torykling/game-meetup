@@ -36,11 +36,12 @@ export class JoinMeetup extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
-          placeholder="name"
+          placeholder="Name"
           name="name"
           onChange={this.handleChange}
+          className="textInput"
         ></input>
-        <input type="submit" value="join"></input>
+        <input type="submit" value="Join" className="button"></input>
       </form>
     );
   }

@@ -1,20 +1,18 @@
 .App {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 /* body */
 .content-wrap {
     width: 75vw;
+    margin: auto;
 }
 
 /* nav */
 .nav {
-    height: 85px;
-    width: 100ve;
+    height: 100px;
+    width: 100vw;
     background-color: #FCC133;
     display: flex;
     justify-content: space-between;
@@ -31,10 +29,23 @@
 .link {
     text-decoration: none;
     color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.linkBlack {
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+.linkBlack:hover {
+    text-decoration: none;
 }
 
 .link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* headers */
@@ -45,22 +56,30 @@
     padding: 20px;
 }
 
-.formHeader {
+.accordion {
     font-size: 20px;
     margin: 3px auto;
     text-align: center;
+    background-color: #FCC133;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    transition: 0.4s;
 }
 
 /* new meetup */
+/* .panel {
+    display: none;
+    overflow: hidden;
+} */
+
 .newMeetup, .editMeetup {
     font-size: 20px;
     margin: 20px 0px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px darkgrey;
-    display: flex;
-    flex-wrap: wrap;
-
 }
 
 .textInput {
@@ -72,8 +91,11 @@
     width: 45%;
     padding: 10px;
 }
-/* 
-buttons */
+input:focus {
+    outline: none;
+}
+
+/* buttons */
 .button {
     padding: 10px 50px;
     margin: 10px 0px;
@@ -83,6 +105,7 @@ buttons */
 
 .button:hover {
     background-color: #dba82e;
+    cursor: pointer;
 }
 
 /* meetup list page */
@@ -101,16 +124,26 @@ buttons */
 
 .imgDiv {
     width: 350px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .infoDiv {
     padding: 20px;
+    width: 35%;
+}
+
+.info {
+    line-height: 1.5;
+    padding: 5px 5px 0 5px;
+}
+
+.bold {
+    font-weight: bold;
+    padding: 5px 0;
 }
 
 .eventName {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     color: black;
     padding: 10px 0px;
@@ -128,10 +161,20 @@ buttons */
 
 .attendees {
     display: flex;
+    justify-content: space-around;
     margin: 20px 0px;
     padding: 20px;
     /* font-size: 16px; */
     border: 20px #FCC133 solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.players {
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    padding: 0 0 10px 0;
 }
 
 .gameImg {
@@ -152,4 +195,10 @@ footer {
     padding: 0px 20px;
     color: white;
     margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+.footer {
+    padding: 30px;
+
 }

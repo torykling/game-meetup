@@ -42,57 +42,59 @@ export class NewMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit} className="newMeetup">
-        <h2 className="formHeader">Create a New Meetup</h2>
-        <input
-          type="text"
-          name="title"
-          onChange={this.handleChange}
-          placeholder="Title"
-          className="textInput"
-        /><br/>
-        <input
-          type="text"
-          name="game"
-          onChange={this.handleChange}
-          placeholder="Game"
-          className="textInput"
-        /><br/>
-        <input
-          type="text"
-          name="date"
-          onChange={this.handleChange}
-          placeholder="date (mm-dd-yyyy)"
-          className="halfTextInput"
-        />
-        <input
-          type="text"
-          name="time"
-          onChange={this.handleChange}
-          placeholder="time (e.g 4:00pm)"
-          className="halfTextInput"
-        /><br/>
-        <input
-          type="text"
-          name="creator"
-          onChange={this.handleChange}
-          placeholder="Creator Name"
-          className="textInput"
-        /><br/>
-        <input
-          type="text"
-          name="location"
-          onChange={this.handleChange}
-          placeholder="address"
-          className="textInput"
-        /><br/>
-        <input
-          type="text"
-          name="message"
-          onChange={this.handleChange}
-          placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
-          className="textInput"
-        /><br/>
-        <input type="submit" className="button" />
+        <button className="accordion">Create a Meetup</button>
+        <div className="panel">
+          <input
+            type="text"
+            name="title"
+            onChange={this.handleChange}
+            placeholder="Title"
+            className="textInput"
+          /><br/>
+          <input
+            type="text"
+            name="game"
+            onChange={this.handleChange}
+            placeholder="Game"
+            className="textInput"
+          /><br/>
+          <input
+            type="text"
+            name="date"
+            onChange={this.handleChange}
+            placeholder="date (mm-dd-yyyy)"
+            className="halfTextInput"
+          />
+          <input
+            type="text"
+            name="time"
+            onChange={this.handleChange}
+            placeholder="time (e.g 4:00pm)"
+            className="halfTextInput"
+          /><br/>
+          <input
+            type="text"
+            name="creator"
+            onChange={this.handleChange}
+            placeholder="Creator Name"
+            className="textInput"
+          /><br/>
+          <input
+            type="text"
+            name="location"
+            onChange={this.handleChange}
+            placeholder="address"
+            className="textInput"
+          /><br/>
+          <input
+            type="text"
+            name="message"
+            onChange={this.handleChange}
+            placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
+            className="textInput"
+          /><br/>
+          <input type="submit" className="button" />
+        </div>
       </form>
     );
   }
