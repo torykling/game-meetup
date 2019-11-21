@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Board Game Meetups!
 
-## Available Scripts
+### Description
+This application is called bgm, or Board Game Meetups. The idea is to be able to create events centered around a specific game and sign up with a location (using the Google Maps API) in mind so you and your friends can meet up and play! This was the result of a group project completed during the Software Engineering Immersive program at General Assembly in a couple days. The back end of this project involving our board game API and routing can be found [in this directory.](https://github.com/shelbyvjacobs/game-meetup-api) 
 
-In the project directory, you can run:
+#### Team Members 
+- [Dallas Lind](https://github.com/DallasLind)
+- [Shelby Jacobs](https://github.com/shelbyvjacobs)
+- [Tory Klingenstein](https://github.com/torykling)
 
-### `npm start`
+### Approach 
+Since this was a group project, we wanted to take an approach that would complement our skillsets. With this project, we wanted to focus on making an elegantly styled site that ran smoothly with user consideration in mind. Our big goal was to ensure CRUD functionality was performing smoothly in React. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Screenshots
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Build Status
+![](https://img.shields.io/badge/BUILD-IN%20PROGRESS-informational)
 
-### `npm test`
+Currently attempting to fix some minor features such as description showing up and styling. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Future Goals
+* Add authentication features
+* Possibly adjust some styling aspects regarding the map
+* Update the API with more games or set up a feature where people can add games to the API
 
-### `npm run build`
+### Technologies Used
+* Node.js
+* Mongoose
+* MongoDB
+* React 
+* Express
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Contribution Guidelines
+If you would to contribute or notify us of any issues, potential improvements, or otherwise, please do so! Feel free to fork this repository and use the issue tracker to notify us of any potential updates we should do.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [Board Game Meetup Repo](https://github.com/torykling/game-meetup)
+* [Issue Track for this Repo](https://github.com/torykling/game-meetup/issues)
