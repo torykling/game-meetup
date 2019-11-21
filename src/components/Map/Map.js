@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // using hooks
-// import ReactMapGL, { Marker } from "react-map-gl";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
+// import ReactMapGL from "react-map-gl";
 // import data up here
 // ex: import * as location from "./meetup.json" or whatever
 
@@ -9,8 +9,8 @@ import MarkerIcon from "./icons8-marker-24.png";
 
 export default function Map(props) {
   const [viewport, setViewport] = useState({
-    latitude: 38.889248,
-    longitude: -77.050636,
+    latitude: 38.919634,
+    longitude: -77.014172,
     // latitude: props.latitude,
     // longitude: props.longitude,
     height: "35vh",
@@ -30,15 +30,15 @@ export default function Map(props) {
           setViewport(viewport);
         }}
       >
-        {/* This is how you insert markers for a coordinate */}
-        {/* <Marker
-          //   key={meetup.id}
-          latitude={props.latitude}
-          longitude={props.longitude}
+        <Marker
+          key={props.meetup.id}
+          latitude={38.919634}
+          longitude={-77.014172}
+          // latitude={props.latitude}
+          // longitude={props.longitude}
         >
-          <div>img/svg of marker here!</div>
-        </Marker> */}
-        <img alt="icon" src={MarkerIcon}></img>
+          <img alt="icon" src={MarkerIcon}></img>
+        </Marker>
       </ReactMapGL>
     </div>
   );
