@@ -5,27 +5,16 @@ import photo from "./boardGame.jpg";
 import Maps from "./Map/Maps";
 
 export class Meetup extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     meetups: this.props.meetups,
-  //     games: this.props.games
-  //   };
-  // }
-  // componentDidMount(props) {
-  //   this.props.getData();
-  // }
-
   render() {
     let theMeetup;
     let theGame;
-    // this.state.meetups.forEach(meetup => {
+
     this.props.meetups.forEach(meetup => {
       if (meetup._id === this.props.match.params.id) {
         theMeetup = meetup;
       }
     });
-    // this.state.games.forEach(game => {
+
     this.props.games.forEach(game => {
       if (theMeetup.game === game.name) {
         theGame = game;
