@@ -4,6 +4,7 @@ import ReactMapGL from "./Map/Map";
 import Attendees from "./Attendees/Attendees";
 import JoinMeetup from "./Inputs/JoinMeetup";
 import photo from "./boardGame.jpg";
+import Maps from "./Map/Maps";
 
 export class Meetup extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export class Meetup extends Component {
     this.state = {
       latitude: 0,
       longitude: 0
+      // theMeetup: null
     };
     // this.getLocation = this.getLocation.bind(this);
   }
@@ -36,14 +38,13 @@ export class Meetup extends Component {
     this.props.meetups.forEach(meetup => {
       if (meetup._id === this.props.match.params.id) {
         theMeetup = meetup;
-        console.log(theMeetup);
+
         // this.getLocation(meetup.location);
       }
     });
     this.props.games.forEach(game => {
       if (theMeetup.game === game.name) {
         theGame = game;
-        console.log(theGame);
       }
     });
     const attendees = theMeetup.attendees.map(attendee => {
@@ -79,7 +80,8 @@ export class Meetup extends Component {
               </p>
             </div>
             <div>
-              <ReactMapGL />
+              <Maps meetup={theMeetup} />
+              {/* <ReactMapGL meetup={theMeetup} /> */}
             </div>
           </div>
           <div className="attendees">
