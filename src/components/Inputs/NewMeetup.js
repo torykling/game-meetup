@@ -11,7 +11,7 @@ export class NewMeetup extends Component {
       time: null,
       creator: null,
       location: null,
-      message: null
+      description: null
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -31,7 +31,7 @@ export class NewMeetup extends Component {
         time: this.state.time,
         creator: this.state.creator,
         location: this.state.location,
-        message: this.state.message
+        description: this.state.description
       })
       .then(res => {
         console.log(res);
@@ -50,14 +50,16 @@ export class NewMeetup extends Component {
             onChange={this.handleChange}
             placeholder="Title"
             className="textInput"
-          /><br/>
+          />
+          <br />
           <input
             type="text"
             name="game"
             onChange={this.handleChange}
             placeholder="Game"
             className="textInput"
-          /><br/>
+          />
+          <br />
           <input
             type="text"
             name="date"
@@ -71,28 +73,32 @@ export class NewMeetup extends Component {
             onChange={this.handleChange}
             placeholder="time (e.g 4:00pm)"
             className="halfTextInput"
-          /><br/>
+          />
+          <br />
           <input
             type="text"
             name="creator"
             onChange={this.handleChange}
             placeholder="Creator Name"
             className="textInput"
-          /><br/>
+          />
+          <br />
           <input
             type="text"
             name="location"
             onChange={this.handleChange}
             placeholder="address"
             className="textInput"
-          /><br/>
+          />
+          <br />
           <input
             type="text"
-            name="message"
+            name="description"
             onChange={this.handleChange}
-            placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
+            placeholder="description (e.g. Come to this fun meetup to play Scrabble!)"
             className="textInput"
-          /><br/>
+          />
+          <br />
           <input type="submit" className="button" />
         </div>
       </form>

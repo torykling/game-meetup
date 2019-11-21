@@ -13,7 +13,7 @@ export class EditMeetup extends Component {
       time: props.meetup.time,
       creator: props.meetup.creator,
       location: props.meetup.location,
-      message: props.meetup.message
+      description: props.meetup.description
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +34,7 @@ export class EditMeetup extends Component {
         time: this.state.time,
         creator: this.state.creator,
         location: this.state.location,
-        message: this.state.message
+        description: this.state.description
       })
       .then(res => {
         console.log(res);
@@ -93,16 +93,15 @@ export class EditMeetup extends Component {
             />
             <input
               type="text"
-              name="message"
+              name="description"
               onChange={this.handleChange}
-              placeholder="message (e.g. Come to this fun meetup to play Scrabble!)"
+              placeholder="meetup description (e.g. Come to this fun meetup to play Scrabble!)"
               className="textInput"
             />
             <input type="submit" className="button" value="Edit this Meetup" />
-            <DeleteMeetup {...this.props} />
           </div>
         </form>
-        {/* <DeleteMeetup {...this.props} /> */}
+        <DeleteMeetup {...this.props} />
       </div>
     );
   }
