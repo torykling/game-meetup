@@ -51,7 +51,6 @@ export class NewMeetup extends Component {
             placeholder="Title"
             className="textInput"
           />
-          <br />
           <input
             type="text"
             name="game"
@@ -59,22 +58,20 @@ export class NewMeetup extends Component {
             placeholder="Game"
             className="textInput"
           />
-          <br />
           <input
             type="text"
             name="date"
             onChange={this.handleChange}
-            placeholder="date (mm-dd-yyyy)"
-            className="halfTextInput"
+            placeholder="Date (mm-dd-yyyy)"
+            className="textInput"
           />
           <input
             type="text"
             name="time"
             onChange={this.handleChange}
-            placeholder="time (e.g 4:00pm)"
-            className="halfTextInput"
+            placeholder="Time (e.g 4:00pm)"
+            className="textInput"
           />
-          <br />
           <input
             type="text"
             name="creator"
@@ -82,23 +79,20 @@ export class NewMeetup extends Component {
             placeholder="Creator Name"
             className="textInput"
           />
-          <br />
           <input
             type="text"
             name="location"
             onChange={this.handleChange}
-            placeholder="address"
+            placeholder="Address"
             className="textInput"
           />
-          <br />
           <input
             type="text"
             name="description"
             onChange={this.handleChange}
-            placeholder="description (e.g. Come to this fun meetup to play Scrabble!)"
+            placeholder="Description (e.g. Come to this fun meetup to play Scrabble!)"
             className="textInput"
           />
-          <br />
           <input type="submit" className="button" />
         </div>
       </form>

@@ -13,10 +13,11 @@ export class Maps extends Component {
     return (
       <div>
         <iframe
-          width="200px"
-          height="200px"
+          width="100%"
+          height="100%"
           frameBorder="0"
           src={mapUrl}
+          className="mapDiv"
         ></iframe>
       </div>
     );

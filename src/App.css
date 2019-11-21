@@ -1,6 +1,6 @@
 .App {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* body */
@@ -68,29 +68,28 @@
     transition: 0.4s;
 }
 
+
 /* new meetup */
-/* .panel {
-    display: none;
-    overflow: hidden;
-} */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .newMeetup, .editMeetup {
     font-size: 20px;
     margin: 20px 0px;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px darkgrey;
 }
 
 .textInput {
-    width: 94%;
+    width: 100%;
     padding: 10px;
+    margin: -1px;
 }
 
-.halfTextInput {
-    width: 45%;
-    padding: 10px;
-}
 input:focus {
     outline: none;
 }
@@ -101,6 +100,7 @@ input:focus {
     margin: 10px 0px;
     border-radius: 4px;
     background-color: #FCC133;
+    max-width: 150px;
 }
 
 .button:hover {
@@ -155,6 +155,10 @@ input:focus {
     width: 95%;
 }
 
+.mapDiv {
+    width: 100%;
+}
+
 .map {
     padding: 0px 20px 10px 20px;
 }
@@ -164,7 +168,6 @@ input:focus {
     justify-content: space-around;
     margin: 20px 0px;
     padding: 20px;
-    /* font-size: 16px; */
     border: 20px #FCC133 solid;
     border-radius: 20px;
     text-align: center;
@@ -185,6 +188,17 @@ input:focus {
 .GameInfo {
     padding: 10px;
     line-height: 1.4;
+}
+
+/* delete form */
+.warning {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 20px 0 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 3px solid #FCC133;
 }
 
 /* footer */
