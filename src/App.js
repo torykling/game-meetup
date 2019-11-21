@@ -13,6 +13,8 @@ export default class App extends Component {
     super(props);
     this.state = { games: null, meetups: null };
     this.getData = this.getData.bind(this);
+    this.doThisWhileLoading = this.doThisWhileLoading.bind(this);
+    // this.editMeetupsByDate = this.editMeetupsByDate.bind(this);
   }
   componentDidMount() {
     this.getData();
@@ -30,6 +32,7 @@ export default class App extends Component {
       .then(res => {
         this.setState({ meetups: res.data });
         // console.log(res.data);
+        // this.editMeetupsByDate();
       })
       .catch(err => console.log(err));
     axios
@@ -40,6 +43,14 @@ export default class App extends Component {
       })
       .catch(err => console.log(err));
   };
+  // editMeetupsByDate = () => {
+  //   let today = new Date();
+  //   const allMeetups = this.state.meetups;
+  //   const relevantMeetups = allMeetups.filter(meetup => {
+  //     return meetup.date >= today;
+  //   });
+  //   this.setState({ meetups: relevantMeetups });
+  // };
   render() {
     return (
       <div className="App">
@@ -48,14 +59,18 @@ export default class App extends Component {
         </nav>
         <div className="content-wrap">
           <div className="child">
-          <Route path="/" exact render={this.doThisWhileLoading}></Route>
-          <Route
-            path="/meetup/id/:id"
-            exact
-            render={routerProps => (
-              <Meetup getData={this.getData} {...routerProps} {...this.state} />
-            )}
-          />
+            <Route path="/" exact render={this.doThisWhileLoading}></Route>
+            <Route
+              path="/meetup/id/:id"
+              exact
+              render={routerProps => (
+                <Meetup
+                  getData={this.getData}
+                  {...routerProps}
+                  {...this.state}
+                />
+              )}
+            />
           </div>
         </div>
         <footer>

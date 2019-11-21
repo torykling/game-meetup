@@ -1,47 +1,31 @@
 import React, { Component } from "react";
 import EditMeetup from "./Inputs/EditMeetup";
-import ReactMapGL from "./Map/Map";
-import Attendees from "./Attendees/Attendees";
 import JoinMeetup from "./Inputs/JoinMeetup";
 import photo from "./boardGame.jpg";
 import Maps from "./Map/Maps";
 
 export class Meetup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      latitude: 0,
-      longitude: 0
-      // theMeetup: null
-    };
-    // this.getLocation = this.getLocation.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     meetups: this.props.meetups,
+  //     games: this.props.games
+  //   };
+  // }
+  // componentDidMount(props) {
+  //   this.props.getData();
+  // }
 
-  // getLocation = location => {
-  //   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=pk.eyJ1IjoiYm9hcmQtZ2FtZS1tZWV0dXAiLCJhIjoiY2szN2UxZG55MGFtbDNnbXI4b2w2b2YyMiJ9.TLHV3tXVaIJkW3Fz52QyxA`;
-  //   const encodedLocation = encodeURI(url);
-  //   console.log(encodedLocation);
-  //   fetch(encodedLocation)
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       this.setState({ latitude: res.features.center[0] });
-  //       this.setState({ longitude: res.features.center[1] });
-  //       console.log(this.state.latitude);
-  //       console.log(this.state.longitude);
-  //     })
-  //     .catch(err => console.log(err));
-  // };
   render() {
     let theMeetup;
     let theGame;
-
+    // this.state.meetups.forEach(meetup => {
     this.props.meetups.forEach(meetup => {
       if (meetup._id === this.props.match.params.id) {
         theMeetup = meetup;
-
-        // this.getLocation(meetup.location);
       }
     });
+    // this.state.games.forEach(game => {
     this.props.games.forEach(game => {
       if (theMeetup.game === game.name) {
         theGame = game;
@@ -57,11 +41,10 @@ export class Meetup extends Component {
     return (
       <div>
         <div className="allMeetupInfo">
-        <h4 className="pageHeader">
-                <b>{theMeetup.title}</b>
-              </h4>
+          <h4 className="pageHeader">
+            <b>{theMeetup.title}</b>
+          </h4>
           <div className="meetupInfo">
-            
             <div>
               <p className="info">
                 <p className="bold">Creator:</p> {theMeetup.creator}
@@ -81,7 +64,6 @@ export class Meetup extends Component {
             </div>
             <div>
               <Maps meetup={theMeetup} />
-              {/* <ReactMapGL meetup={theMeetup} /> */}
             </div>
           </div>
           <div className="attendees">
