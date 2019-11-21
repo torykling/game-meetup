@@ -1,1 +1,4 @@
-/* / 404
+[[redirects]]
+from = "/*"
+to = "https://lucid-noether-312707.netlify.com/"
+status = 404 
