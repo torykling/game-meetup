@@ -1,6 +1,5 @@
 import React from 'react';
-import { conditionalExpression } from '@babel/types';
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav= (props) => {
     let classList = 'nav'
