@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import axios from "axios";
 
 let baseUrl = window.location.host.includes("localhost")
-  ? "localhost:4000"
+  ? "localhost:6080"
   : "https://game-meetup-api.herokuapp.com";
 
 export default class App extends Component {
@@ -23,7 +23,7 @@ export default class App extends Component {
     this.getData();
   }
   doThisWhileLoading = () => {
-    if (this.state.games !== null && this.state.meetups !== null) {
+    if (this.state.games.length !== 0 && this.state.meetups.length !== 0) {
       return <MeetupList getData={this.getData} {...this.state} />;
     } else {
       return <h1 className="pageHeader">Loading...</h1>;
