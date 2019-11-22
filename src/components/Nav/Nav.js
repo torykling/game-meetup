@@ -8,6 +8,7 @@ const Nav= (props) => {
             <Link className="header" to="/">
                 bgm.
             </Link>
+            <p className="fullName">board game meetups.</p>
         </div>
     )
 }
