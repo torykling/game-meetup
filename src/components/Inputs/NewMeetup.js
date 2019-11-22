@@ -10,7 +10,7 @@ export class NewMeetup extends Component {
       date: null,
       time: null,
       creator: null,
-      location: null,
+      location: "Washington, DC",
       description: null
     };
     this.onSubmit = this.onSubmit.bind(this);
