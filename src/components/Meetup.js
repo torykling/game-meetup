@@ -6,6 +6,10 @@ import Maps from "./Map/Maps";
 
 export class Meetup extends Component {
   render() {
+    if (this.props.meetups.length === 0 && this.props.games.length === 0) {
+      return <p>Loading</p>;
+    }
+
     let theMeetup;
     let theGame;
 
