@@ -1,6 +1,7 @@
 .App {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    width: 100vw;
 }
 
 /* body */
@@ -10,6 +11,10 @@
 }
 
 /* nav */
+nav {
+    width: 100vw;
+}
+
 .nav {
     height: 100px;
     width: 100vw;
@@ -18,18 +23,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0px 20px;
 }
 
 .header {
     color: white;
     font-family: 'Fredoka One', cursive;
     font-size: 60px;
-    padding: 5px 0;
+    padding: 5px 50px;
 }
 
 .fullName {
     color: white;
+    padding: 0px 50px;
 }
 
 .link {
@@ -236,7 +241,7 @@ footer {
 @media screen and (min-width: 0px) and (max-width: 575px) {
 
     .nav {
-        width: 100%;
+        width: 120%;
     }
 
     .pageHeader {
