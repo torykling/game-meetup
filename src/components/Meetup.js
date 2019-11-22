@@ -34,7 +34,7 @@ export class Meetup extends Component {
             <b>{theMeetup.title}</b>
           </h4>
           <div className="meetupInfo">
-            <div>
+            <div className="infoDiv">
               <div className="info">
                 <p className="bold">Creator:</p> {theMeetup.creator}
               </div>
@@ -54,7 +54,7 @@ export class Meetup extends Component {
                 <p className="bold">Description:</p> {theMeetup.description}
               </div>
             </div>
-            <div>
+            <div className="mapDiv">
               <Maps meetup={theMeetup} />
             </div>
           </div>
