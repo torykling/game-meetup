@@ -33,7 +33,8 @@ export default class App extends Component {
         this.setState({ meetups: res.data });
       })
       .catch(err => console.log(err));
-    axios.get("https://game-meetup-api.herokuapp.com/games")``
+    axios
+      .get("https://game-meetup-api.herokuapp.com/games")
       .then(res => {
         this.setState({ games: res.data });
       })
