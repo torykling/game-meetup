@@ -156,6 +156,7 @@ input:focus {
 
 .mapDiv {
     width: 100%;
+    height: 400px;
 }
 
 .map {

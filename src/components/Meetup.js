@@ -34,19 +34,11 @@ export class Meetup extends Component {
             <b>{theMeetup.title}</b>
           </h4>
           <div className="meetupInfo">
-            <div>
+            <div className="infoDiv">
               <div className="info">
                 <p className="bold">Creator:</p> {theMeetup.creator}
-<<<<<<< HEAD
               </div>
               <div className="info">
-=======
-              </p>
-              <p className="info">
-                <p className="bold">Game:</p> {theMeetup.game}
-              </p>
-              <p className="info">
->>>>>>> 210d3c7679da14f6cf2a09eb0de6fa7b8fa52d34
                 <p className="bold">Date:</p> {theMeetup.date}
               </div>
               <div className="info">
@@ -59,7 +51,7 @@ export class Meetup extends Component {
                 <p className="bold">Description:</p> {theMeetup.description}
               </div>
             </div>
-            <div>
+            <div className="mapDiv">
               <Maps meetup={theMeetup} />
             </div>
           </div>
