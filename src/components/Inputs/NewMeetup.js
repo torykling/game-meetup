@@ -42,7 +42,7 @@ export class NewMeetup extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit} className="newMeetup">
-        <button className="accordion">Create a Meetup</button>
+        <div className="accordion">Create a Meetup</div>
         <div className="panel">
           <input
             type="text"
