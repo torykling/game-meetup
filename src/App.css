@@ -65,7 +65,6 @@
     width: 100%;
     padding: 10px;
     outline: none;
-    transition: 0.4s;
 }
 
 
@@ -215,4 +214,88 @@ footer {
 .footer {
     padding: 30px;
 
+}
+
+/* RESPONSIVE */
+
+/* SMALL */
+@media screen and (min-width: 0px) and (max-width: 575px) {
+
+    .nav {
+        width: 100%;
+    }
+
+    .pageHeader {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .newMeetup, .editMeetup {
+        margin: 5px 0px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .textInput {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .meetupCard, .allMeetupInfo {
+        margin: 5px 0px;
+        padding: 10px 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .imgDiv {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    .infoDiv {
+        padding: 0px;
+        width: 100%;
+    }
+    
+    .info {
+        line-height: 1.5;
+        padding: 5px 5px 0 5px;
+    }
+
+    .eventName {
+        font-size: 20px;
+    }
+
+    .meetupInfo {
+        flex-direction: column;
+    }
+
+    .attendees {
+        flex-direction: column;
+        margin: 20px 0px;
+        padding: 10px;
+        border: 15px #FCC133 solid;
+    }
+
+    .players{
+        font-size: 25px;
+    }
+
+    .GameInfo{
+        line-height: 1;
+    }
+
+    footer {
+        height: 50px;
+        width: 120%;
+    }
+    
+    .footer {
+        padding: 10px;
+        margin: 15px 0 0 0;
+    }
 }

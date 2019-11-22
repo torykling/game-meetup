@@ -18,6 +18,7 @@ export class Maps extends Component {
           frameBorder="0"
           src={mapUrl}
           className="mapDiv"
+          title="map"
         ></iframe>
       </div>
     );

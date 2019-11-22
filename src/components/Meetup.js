@@ -35,21 +35,21 @@ export class Meetup extends Component {
           </h4>
           <div className="meetupInfo">
             <div>
-              <p className="info">
+              <div className="info">
                 <p className="bold">Creator:</p> {theMeetup.creator}
-              </p>
-              <p className="info">
+              </div>
+              <div className="info">
                 <p className="bold">Date:</p> {theMeetup.date}
-              </p>
-              <p className="info">
+              </div>
+              <div className="info">
                 <p className="bold">Time:</p> {theMeetup.time}
-              </p>
-              <p className="info">
+              </div>
+              <div className="info">
                 <p className="bold">Location:</p> {theMeetup.location}
-              </p>
-              <p className="info">
+              </div>
+              <div className="info">
                 <p className="bold">Description:</p> {theMeetup.description}
-              </p>
+              </div>
             </div>
             <div>
               <Maps meetup={theMeetup} />
