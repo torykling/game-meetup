@@ -8,10 +8,14 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 
+let baseUrl = window.location.host.includes("localhost")
+  ? "localhost:6080"
+  : "https://game-meetup-api.herokuapp.com";
+
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { games: null, meetups: null };
+    this.state = { games: [], meetups: [] };
     this.getData = this.getData.bind(this);
     this.doThisWhileLoading = this.doThisWhileLoading.bind(this);
   }
@@ -19,23 +23,24 @@ export default class App extends Component {
     this.getData();
   }
   doThisWhileLoading = () => {
-    if (this.state.games !== null && this.state.meetups !== null) {
+    if (this.state.games.length !== 0 && this.state.meetups.length !== 0) {
       return <MeetupList getData={this.getData} {...this.state} />;
     } else {
       return <h1 className="pageHeader">Loading...</h1>;
     }
   };
   getData = () => {
+    console.log("getting data");
     axios
-      .get("https://game-meetup-api.herokuapp.com/")
+      .get(baseUrl)
       .then(res => {
-        this.setState({ meetups: res.data });
+        this.setState({ meetups: res.data }, () => console.log("got meetups"));
       })
       .catch(err => console.log(err));
     axios
-      .get("https://game-meetup-api.herokuapp.com/games")
+      .get(`${baseUrl}/games`)
       .then(res => {
-        this.setState({ games: res.data });
+        this.setState({ games: res.data }, () => console.log("got games"));
       })
       .catch(err => console.log(err));
   };
