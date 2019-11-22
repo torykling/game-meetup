@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 export class Maps extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     let newLocation = this.props.meetup.location.split(" ").join("+");
     const mapUrl = encodeURI(
