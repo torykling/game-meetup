@@ -47,7 +47,7 @@ export class EditMeetup extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="editMeetup">
-          <button className="accordion">Edit This Meetup</button>
+          <div className="accordion">Edit This Meetup</div>
           <div className="panel">
             <input
               type="text"

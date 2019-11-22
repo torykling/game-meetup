@@ -32,7 +32,7 @@ export class DeleteMeetup extends Component {
     return (
       <div>
         <form onSubmit={this.handleClick} className="editMeetup">
-          <button className="accordion">Delete This Meetup</button>
+          <div className="accordion">Delete This Meetup</div>
           <div className="panel">
             <p className="warning">Be careful! This action can't be undone.</p>
             <input type="submit" value="Delete this Meetup" className="button panel"></input>
